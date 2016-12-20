@@ -1,7 +1,8 @@
-
 public class Film {
 	static Function fun=new Function();
+	int balance=4;
 	String name;
+	String address;
 	String comments;
 	double marks;
 	boolean show=false;
