@@ -1,4 +1,5 @@
-public class Film {
+import java.io.*;
+public class Film implements Serializable{
 	static Function fun=new Function();
 	int balance=4;
 	String name;
@@ -9,8 +10,12 @@ public class Film {
 	String hall;
 	String seats;
 	String time;
-	public Film(){
+	int count;
+	public Film(String name){
+		this.name=name;
+		double marks=0.0;
 		this.show=true;
+		this.count=0;
 	}
 	String getname(){
 		return this.name;
@@ -18,7 +23,7 @@ public class Film {
 	String getcomments(){
 		return this.comments;
 	}
-	double getmarks(){
+	Double getmarks(){
 		return this.marks;
 	}
 	String gethall(){
@@ -27,11 +32,12 @@ public class Film {
 	String gettime(){
 		return this.time;
 	}
-	String addcomments(String comments){
-		this.comments=fun.add(comments);
+	void  addcomments(String comments){
+		fun.add(comments);
 	}
-	Double addmarks(Double marks){
-		this.marks=fun.average(marks);
+	void addmarks(double marks){
+		this.marks=fun.average(this.marks,marks,count);
+		this.count++;
 	}
 	
 	

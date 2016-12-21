@@ -1,15 +1,21 @@
-
-class Customer {
+import java.io.*;
+class Customer implements Serializable{
 	String account;
 	String name;
 	String password;
-	double balance=0;
-	boolean VIP=false;
-	boolean signin=false;
+	double balance;
+	boolean VIP;
+	boolean signin;
+	Customer()
+	{
+		this.balance=0;
+		this.VIP=false;
+		this.signin=false;
+	}
 	String getaccount(){
 		return this.account;
 	}
-	double getbalance(){
+	Double getbalance(){
 		return this.balance;
 	}
 	String getname(){
@@ -28,6 +34,9 @@ class Customer {
 		double i;
 		i=this.balance;
 		this.balance=balance+i;
+       }
+	void consume(double money){
+		this.balance=this.balance-money;
 	}
 }
-	
+		
