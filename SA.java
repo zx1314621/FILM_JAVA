@@ -34,7 +34,7 @@ public class SA {
 	 */
 	
 	public static void main(String[] args) {
-		
+		f.oriFilm();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -67,7 +67,7 @@ public class SA {
 	private void initialize() {
 		frmyu = new JFrame();
 		frmyu.setTitle("\u6B22\u8FCE\u4F7F\u7528YU\u7535\u5F71\u8D2D\u7968\u7CFB\u7EDF");
-		frmyu.setBounds(100, 100, 406, 755);
+		frmyu.setBounds(300, 25, 406, 755);
 		frmyu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmyu.getContentPane().setLayout(new CardLayout(0, 0));
 		
@@ -80,7 +80,7 @@ public class SA {
 		
 		JLabel lblNewLabel = new JLabel("");
 		panel_1.add(lblNewLabel);
-		lblNewLabel.setIcon(new ImageIcon("E:\\JaveDev\\workspace\\testStatic\\icon.png"));
+		lblNewLabel.setIcon(new ImageIcon("icon.png"));
 		
 		JPanel panel_2 = new JPanel();
 		panel.add(panel_2);
@@ -97,13 +97,12 @@ public class SA {
 		
 		JLabel lblNewLabel_1 = new JLabel("\u7528\u6237\u540D\uFF1A");
 		lblNewLabel_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
-		lblNewLabel_1.setIcon(new ImageIcon("E:\\JaveDev\\workspace\\testStatic\\icon01.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("icon01.jpg"));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_1);
 		
 		textField = new JTextField();
 		textField.setBackground(new Color(240, 255, 240));
-		textField.setText("\u8BF7\u8F93\u5165\u60A8\u7684\u7528\u6237\u540D");
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		panel_3.add(textField);
@@ -120,14 +119,13 @@ public class SA {
 		
 		JLabel lblNewLabel_2 = new JLabel("\u5BC6\u7801\uFF1A");
 		lblNewLabel_2.setBackground(new Color(173, 216, 230));
-		lblNewLabel_2.setIcon(new ImageIcon("E:\\JaveDev\\workspace\\testStatic\\icon02.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("icon02.png"));
 		lblNewLabel_2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_2);
 		
 		textField_1 = new JTextField();
 		panel_4.add(textField_1);
-		textField_1.setText("\u8BF7\u8F93\u5165\u60A8\u7684\u7528\u6237\u540D");
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		textField_1.setColumns(10);
@@ -152,6 +150,7 @@ public class SA {
 						}
 					}
 				});
+					
 					
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {

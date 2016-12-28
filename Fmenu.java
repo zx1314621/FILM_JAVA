@@ -42,6 +42,7 @@ public class Fmenu extends JFrame {
 	 * Create the frame.
 	 */
 	public Fmenu() {
+		setTitle("\u83DC\u5355");
 		setBounds(100, 100, 450, 454);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -67,10 +68,29 @@ public class Fmenu extends JFrame {
 		});
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("New button");
+		JButton btnNewButton_1 = new JButton("\u7535\u5F71\u8D2D\u7968");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							Ffilm frame = new Ffilm();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+				
+				
+			}
+		});
+		btnNewButton_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("New button");
+		JButton btnNewButton_2 = new JButton("\u8D26\u6237\u5145\u503C");
+		btnNewButton_2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("New button");
@@ -79,7 +99,8 @@ public class Fmenu extends JFrame {
 		JButton btnNewButton_4 = new JButton("New button");
 		contentPane.add(btnNewButton_4);
 		
-		JButton btnNewButton_5 = new JButton("New button");
+		JButton btnNewButton_5 = new JButton("\u8054\u7CFB\u5BA2\u670D");
+		btnNewButton_5.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		contentPane.add(btnNewButton_5);
 	}
 	

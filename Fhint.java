@@ -36,6 +36,7 @@ public class Fhint extends JFrame {
 	 * Create the frame.
 	 */
 	public Fhint() {
+		setTitle("\u901A\u77E5\u4FE1\u606F");
 		setBounds(100, 100, 350, 137);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.PINK);

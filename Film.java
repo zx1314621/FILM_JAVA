@@ -1,44 +1,27 @@
-import java.io.*;
-public class Film implements Serializable{
-	static Function fun=new Function();
-	int balance=4;
+package cn.edu.usst.freedom;
+
+class Film {
 	String name;
-	String address;
-	String comments;
-	double marks;
-	boolean show=false;
-	String hall;
-	String seats;
-	String time;
-	int count;
-	public Film(String name){
+	double price;
+	String[] comments;
+	boolean[][] seats;
+	int mark;
+	int member;
+	String pic;
+
+	public Film(String name,double price,String pic){
 		this.name=name;
-		double marks=0.0;
-		this.show=true;
-		this.count=0;
+		this.price=price;
+		this.mark=mark;
+		this.pic=pic;
+		comments=new String[20];
+		seats=new boolean[10][10];
+		this.mark=50;
+		this.member=0;
 	}
-	String getname(){
-		return this.name;
+	void changemark(int mark){
+		this.member++;
+		this.mark=((this.mark*(this.member-1)+mark)/(this.member));
 	}
-	String getcomments(){
-		return this.comments;
-	}
-	Double getmarks(){
-		return this.marks;
-	}
-	String gethall(){
-		return this.hall;
-	}
-	String gettime(){
-		return this.time;
-	}
-	void  addcomments(String comments){
-		fun.add(comments);
-	}
-	void addmarks(double marks){
-		this.marks=fun.average(this.marks,marks,count);
-		this.count++;
-	}
-	
-	
 }
+

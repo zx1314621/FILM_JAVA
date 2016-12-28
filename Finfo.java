@@ -44,12 +44,13 @@ public class Finfo extends JFrame {
 	 * Create the frame.
 	 */
 	public Finfo() {
+		setTitle("\u8FD9\u662F\u60A8\u7684\u8D26\u6237\u4FE1\u606F");
 		user=f.getUser();
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(new GridLayout(4, 0, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel("\u8D26\u53F7\uFF1A");
+		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		getContentPane().add(lblNewLabel);
