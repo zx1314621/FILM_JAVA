@@ -1,48 +1,45 @@
-package cn.edu.usst.freedom;
-import java.io.Serializable;
-	/**
-	 * 表示客户端和服务器之间传输的指令数据
-	 *
-	 */
-	public class Client implements Serializable{
+package cn.com.Mike;
 
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
-		
-		private Object user;//传输数据
-		private String result;//返回结果
-		private boolean flag;//操作是否成功
-		private String cmd;//操作指令
-		public CommandTransfer() {
-			super();
-		}
-		public Object getUser() {
-			return user;
-		}
-		public void setUser(User user) {
-			this.user = user;
-		}
-		public String getResult() {
-			return result;
-		}
-		public void setResult(String result) {
-			this.result = result;
-		}
-		public boolean isFlag() {
-			return flag;
-		}
-		public void setFlag(boolean flag) {
-			this.flag = flag;
-		}
-		public String getCmd() {
-			return cmd;
-		}
-		public void setCmd(String cmd) {
-			this.cmd = cmd;
-		}
-		
-	}
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.ArrayList;
 
+
+
+public class Client {
+	static ArrayList<User> customer=new ArrayList<User>();
+	public static void main(String args[]){
+		User e1=new User();
+		e1.username="abc";
+		e1.password="123456";
+		e1.acount="cd123456";
+		e1.telephone="10086";
+		
+		customer.add(e1);
+		
+		
+			try {
+				Socket socket=new Socket("127.0.0.1",8626);
+				ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream()); 
+				ObjectInputStream in = new ObjectInputStream(socket.getInputStream());  
+				out.writeObject(e1);
+				out.flush();
+				out.close();
+				in.close();
+			} catch (UnknownHostException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+	
+		
+	
+
+}
 }
