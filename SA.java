@@ -102,6 +102,11 @@ public class SA {
 		panel_6.add(lblNewLabel_1);
 		
 		textField = new JTextField();
+		try {
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		textField.setBackground(new Color(240, 255, 240));
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));

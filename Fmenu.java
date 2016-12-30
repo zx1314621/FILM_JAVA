@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import luckydraw.*;
 
 public class Fmenu extends JFrame {
 
@@ -96,7 +97,22 @@ public class Fmenu extends JFrame {
 		JButton btnNewButton_3 = new JButton("New button");
 		contentPane.add(btnNewButton_3);
 		
-		JButton btnNewButton_4 = new JButton("New button");
+		JButton btnNewButton_4 = new JButton("\u652F\u4ED8\u5341\u5143\u62BD\u7CBE\u7F8E\u5956\u54C1");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							Fhint3 frame = new Fhint3();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
+		btnNewButton_4.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		contentPane.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("\u8054\u7CFB\u5BA2\u670D");

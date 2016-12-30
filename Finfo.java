@@ -20,7 +20,6 @@ public class Finfo extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
-	static String account;
 	static User user=new User();
 	static Function f=new Function();
 

@@ -63,7 +63,7 @@ public class Fseat extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Freedom\\Documents\\JavaWorkSpace\\testStatic\\bar.png"));
+		lblNewLabel.setIcon(new ImageIcon("bar.png"));
 		contentPane.add(lblNewLabel, BorderLayout.NORTH);
 		
 		JPanel panel = new JPanel();
@@ -379,7 +379,7 @@ public class Fseat extends JFrame {
 				for(int i=0;i<5;i++)
 				{
 					for(int j=0;j<5;j++){
-						test.resetSeats(i, j);
+						test.seats[i][j]=true;
 					}
 				}
 			}

@@ -24,7 +24,7 @@ public class Flist extends JFrame {
 	static Function f=new Function();
 	static Fseat fs=new Fseat();   
 	private JTextField textField;
-	static String seat;
+	static String seat=" ";
 	    
 	/**
 	 * Launch the application.
@@ -98,7 +98,7 @@ public class Flist extends JFrame {
 		textField_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		textField_1.setEditable(false);
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setText("µçÓ°Ãû"+test.name);
+		textField_1.setText(test.name);
 		panel_2.add(textField_1);
 		textField_1.setColumns(10);
 		
@@ -108,6 +108,7 @@ public class Flist extends JFrame {
 		panel_2.add(lblNewLabel_4);
 		
 		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
 		textField.setEditable(false);
 		textField.setText(seat);

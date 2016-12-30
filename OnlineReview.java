@@ -1,6 +1,4 @@
-package cn.com.Mike;
-
-
+package webspider;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,56 +11,8 @@ public class OnlineReview {
 	 * @param args
 	 * @throws Exception 
 	 */
-	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
-		Filmreviewonline fro=new Filmreviewonline();
-		Scanner sc = new Scanner(System.in); 
-		
-		int choice = sc.nextInt();
-		switch(choice){
-		case 1:{
-			System.out.println("《你的名字》的影评———来自豆瓣网");
-			fro.getonlinereviews_yourname();
-			break;
-		 }
-		case 2:{
-			System.out.println("《神奇动物在哪里》的影评———来自豆瓣网");
-			fro.getonlinereviews_horrypotter2016();
-			break;
-		 }
-		case 3:{
-			System.out.println("《疯狂动物城》的影评———来自豆瓣网");
-			fro.getonlinereviews_Zootopia();
-			break;
-		 }
-		case 4:{
-			System.out.println("《功夫熊猫》的影评———来自豆瓣网");
-			fro.getonlinereviews_KungFuPanda();
-			break;
-		 }
-		case 5:{
-			System.out.println("《湄公河行动》的影评———来自豆瓣网");
-			fro.getonlinereviews_MeiGongHe();
-			break;
-		 }
-		case 6:{
-			System.out.println("《大鱼海棠》的影评———来自豆瓣网");
-		    fro.getonlinereviews_DaHai();
-		    break;
-		 }
-		
-	  }
-		
-		
-		
-	 }
-}
-
-
-class Filmreviewonline{
-	//通过爬虫获得网上的影评
-	//<你的名字>
-	public void getonlinereviews_yourname() throws Exception{
+	public String getonlinereviews_yourname() throws Exception{
+		String str=" ";
       URL urlusstnews=new URL("https://movie.douban.com/subject/26683290/?from=showing");
 
       
@@ -80,12 +30,12 @@ class Filmreviewonline{
 		 for (int i=0;i<3;i++){
 			 m.find();
 			 String YN=m.group();
-		        System.out.println(m.group());
-		
+			 str=str+"\n"+YN;
 		 }
+		 return str;
 	}
 
-  //<神奇动物在哪里>
+  //<���涯��������>
 	public void getonlinereviews_horrypotter2016() throws Exception{
 	      URL urlusstnews=new URL("https://movie.douban.com/subject/25726614/");
 
@@ -108,7 +58,7 @@ class Filmreviewonline{
 	                
           }
 	}
-	//<疯狂动物城>
+	//<������>
 	public void getonlinereviews_Zootopia() throws Exception{
 	      URL urlusstnews=new URL("https://movie.douban.com/subject/26683290/?from=showing");
 
@@ -132,7 +82,7 @@ class Filmreviewonline{
 			 }
 		}
 	
-	//<功夫熊猫>
+	//<������è>
 	public void getonlinereviews_KungFuPanda() throws Exception{
 	      URL urlusstnews=new URL("https://movie.douban.com/subject/1783457/");
 
@@ -155,7 +105,7 @@ class Filmreviewonline{
 			
 			 }
 		}
-	//<湄公河行动>
+	//<�ع����ж�>
 	public void getonlinereviews_MeiGongHe() throws Exception{
 	      URL urlusstnews=new URL("https://movie.douban.com/subject/25815034/");
 
@@ -178,9 +128,9 @@ class Filmreviewonline{
 			
 			 }
 		}
-	//<大鱼海棠>
-	public void getonlinereviews_DaHai() throws Exception{
-	      URL urlusstnews=new URL("https://movie.douban.com/subject/5045678/");
+	//<ʹͽ����>
+	public void getonlinereviews_ShiTu() throws Exception{
+	      URL urlusstnews=new URL("https://movie.douban.com/subject/26336253/");
 
 	      
 			BufferedReader in=new BufferedReader(new InputStreamReader(urlusstnews.openStream()));
@@ -196,7 +146,7 @@ class Filmreviewonline{
 			Matcher m = p.matcher(s);
 			 for (int i=0;i<3;i++){
 				 m.find();
-				 String DH=m.group();
+				 String ST=m.group();
 			        System.out.println(m.group());
 			
 			 }
@@ -207,4 +157,3 @@ class Filmreviewonline{
 
 
 }
-	

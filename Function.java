@@ -1,5 +1,7 @@
 package cn.edu.usst.freedom;
 import java.util.*;
+
+import webspider.OnlineReview;
 public class Function {
 	
 	static  ArrayList<User> user=new  ArrayList<User>();
@@ -73,6 +75,19 @@ public class Function {
 		Random random=new Random();
 		i=random.nextInt(10);
 		return cinema[i];
+	}
+	String getComments() throws Exception{
+		String str = null;
+		OnlineReview or=new OnlineReview();
+		Ffilm f=new Ffilm();
+		int i;
+		i=f.backi();
+		switch(0)
+		{
+		case 0:str=or.getonlinereviews_yourname();
+		
+		}
+		return str;
 	}
 
 	
