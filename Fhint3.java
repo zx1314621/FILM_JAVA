@@ -11,6 +11,11 @@ import java.awt.GridLayout;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
+
+import recharge.ReCharge;
+
+import cn.edu.usst.freedom.*;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -20,7 +25,8 @@ public class Fhint3 extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
-
+    static User user=new User();
+    static Function f=new Function(); 
 	/**
 	 * Launch the application.
 	 */
@@ -41,6 +47,7 @@ public class Fhint3 extends JFrame {
 	 * Create the frame.
 	 */
 	public Fhint3() {
+		user=f.getUser();
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,7 +58,7 @@ public class Fhint3 extends JFrame {
 		contentPane.add(panel, BorderLayout.NORTH);
 		
 		JLabel lblNewLabel = new JLabel("\u8BF7\u786E\u8BA4\u4FE1\u606F");
-		lblNewLabel.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel.add(lblNewLabel);
 		
 		JPanel panel_1 = new JPanel();
@@ -59,21 +66,27 @@ public class Fhint3 extends JFrame {
 		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("\u7528\u6237\u540D");
-		lblNewLabel_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_1);
 		
 		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setFont(new Font("微软雅黑", Font.PLAIN, 20));
+		textField.setText(""+user.username);
 		textField.setEditable(false);
 		panel_1.add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("\u7528\u6237\u4F59\u989D");
-		lblNewLabel_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_2);
 		
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
+		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1.setText(""+user.balance);
 		textField_1.setEditable(false);
 		panel_1.add(textField_1);
 		textField_1.setColumns(10);
@@ -85,6 +98,7 @@ public class Fhint3 extends JFrame {
 		JButton btnNewButton = new JButton("\u786E\u8BA4");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				if(user.balance>=10){
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
@@ -94,11 +108,28 @@ public class Fhint3 extends JFrame {
 							e.printStackTrace();
 						}
 					}
+				});setVisible(false);}
+				else{	EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							Fhint8 frame = new Fhint8();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
 				});
+				
+				setVisible(false);
+				
+				}
 			}
 		});
-		btnNewButton.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_2.add(btnNewButton);
 	}
 
+	User getUser(){
+		return user;
+	}
 }

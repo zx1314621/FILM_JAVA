@@ -46,10 +46,9 @@ public class Demo extends JFrame {
     
     public Demo() {
         super();
-        setTitle("³é½±´ó×ªÅÌ");
+        setTitle("æŠ½å¥–");
         setResizable(false);
         setBounds(100, 100, 700, 700);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        
         final ImagePanel imagePanel = new ImagePanel();
         
