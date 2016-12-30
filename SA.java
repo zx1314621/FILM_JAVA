@@ -96,7 +96,7 @@ public class SA {
 		panel_6.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("\u7528\u6237\u540D\uFF1A");
-		lblNewLabel_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel_1.setIcon(new ImageIcon("icon01.jpg"));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6.add(lblNewLabel_1);
@@ -109,7 +109,7 @@ public class SA {
 		}
 		textField.setBackground(new Color(240, 255, 240));
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
-		textField.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		textField.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_3.add(textField);
 		textField.setColumns(10);
 		
@@ -125,14 +125,14 @@ public class SA {
 		JLabel lblNewLabel_2 = new JLabel("\u5BC6\u7801\uFF1A");
 		lblNewLabel_2.setBackground(new Color(173, 216, 230));
 		lblNewLabel_2.setIcon(new ImageIcon("icon02.png"));
-		lblNewLabel_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_8.add(lblNewLabel_2);
 		
 		textField_1 = new JTextField();
 		panel_4.add(textField_1);
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		textField_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		textField_1.setColumns(10);
 		textField_1.setBackground(new Color(240, 255, 240));
 		
@@ -185,7 +185,7 @@ public class SA {
 				
 			}
 		});
-		btnNewButton.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_5.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("\u6CE8\u518C");
@@ -207,7 +207,7 @@ public class SA {
 				
 			}
 		});
-		btnNewButton_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_5.add(btnNewButton_1);
 	}
 }

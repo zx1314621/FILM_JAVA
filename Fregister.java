@@ -57,7 +57,7 @@ public class Fregister extends JFrame {
 		panel_9.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("\u6CE8\u518C");
-		lblNewLabel.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel);
 		
@@ -70,9 +70,9 @@ public class Fregister extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("\u7528\u6237\u540D\uFF1A");
-		lblNewLabel_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Freedom\\Documents\\JavaWorkSpace\\testStatic\\icon01.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("icon01.jpg"));
 		panel_1.add(lblNewLabel_1);
 		
 		JPanel panel_2 = new JPanel();
@@ -81,7 +81,7 @@ public class Fregister extends JFrame {
 		
 		textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
-		textField.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		textField.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_2.add(textField);
 		textField.setColumns(10);
 		
@@ -91,8 +91,8 @@ public class Fregister extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("\u5BC6\u7801\uFF1A");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Freedom\\Documents\\JavaWorkSpace\\testStatic\\icon02.png"));
-		lblNewLabel_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_2.setIcon(new ImageIcon("icon02.png"));
+		lblNewLabel_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_3.add(lblNewLabel_2);
 		
 		JPanel panel_4 = new JPanel();
@@ -101,7 +101,7 @@ public class Fregister extends JFrame {
 		
 		textField_1 = new JTextField();
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		textField_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		textField_1.setColumns(10);
 		panel_4.add(textField_1);
 		
@@ -111,7 +111,7 @@ public class Fregister extends JFrame {
 		
 		JLabel lblNewLabel_3 = new JLabel("\u59D3\u540D\uFF1A");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_3.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_5.add(lblNewLabel_3);
 		
 		JPanel panel_6 = new JPanel();
@@ -120,7 +120,7 @@ public class Fregister extends JFrame {
 		
 		textField_2 = new JTextField();
 		textField_2.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		textField_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		textField_2.setColumns(10);
 		panel_6.add(textField_2);
 		
@@ -130,7 +130,7 @@ public class Fregister extends JFrame {
 		
 		JLabel lblNewLabel_4 = new JLabel("\u624B\u673A\u53F7\uFF1A");
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_4.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_7.add(lblNewLabel_4);
 		
 		JPanel panel_8 = new JPanel();
@@ -139,7 +139,7 @@ public class Fregister extends JFrame {
 		
 		textField_3 = new JTextField();
 		textField_3.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_3.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		textField_3.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		textField_3.setColumns(10);
 		panel_8.add(textField_3);
 		
@@ -167,7 +167,7 @@ public class Fregister extends JFrame {
 				
 			}
 		});
-		btnNewButton.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_10.add(btnNewButton);
 	}
 

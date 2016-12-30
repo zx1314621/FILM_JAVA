@@ -1,22 +1,23 @@
 package cn.edu.usst.freedom;
 
-class Film {
+import java.io.Serializable;
+
+public class Film implements Serializable{
 	String name;
-	double price;
-	String[] comments;
+	int price;
+	public String filmreview;
 	boolean[][] seats;
 	int mark;
 	int member;
 	String pic;
 	String brief;
 
-	public Film(String name,double price,String pic,String brief){
+	public Film(String name,int price,String pic,String brief){
 		this.name=name;
 		this.price=price;
 		this.mark=mark;
 		this.pic=pic;
 		this.brief=brief;
-		comments=new String[20];
 		seats=new boolean[5][5];
 		this.mark=50;
 		this.member=0;
@@ -25,6 +26,9 @@ class Film {
 				seats[i][j]=true;
 			}
 		}
+	}
+	public Film(){
+		
 	}
 	void changemark(int mark){
 		this.member++;
@@ -36,5 +40,13 @@ class Film {
 	void resetSeats(int i,int j){
 		this.seats[i][j]=true;
 	}
+	public void setfilmreview(String filmreview){
+		this.filmreview=filmreview;
+	}
+	
+	public  String getfilmreview(String filmreview){
+		return filmreview;
+	}
+	
 }
 

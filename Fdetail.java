@@ -82,7 +82,7 @@ public class Fdetail extends JFrame {
 		slider.setValue(test.mark);
 		slider.setBounds(0, 0, 257, 59);
 		panel_3.add(slider);
-		slider.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		slider.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		slider.setBorder(new TitledBorder(new CompoundBorder(UIManager.getBorder("Button.border"), new CompoundBorder(null, UIManager.getBorder("CheckBoxMenuItem.border"))), "\u8BC4\u5206  "+test.mark, TitledBorder.CENTER, TitledBorder.TOP, null, new Color(64, 64, 64)));
 		slider.setPaintLabels(true);
 		slider.setPaintTicks(true);
@@ -95,7 +95,7 @@ public class Fdetail extends JFrame {
 		textArea.setBackground(SystemColor.info);
 		textArea.setText(test.brief);
 		textArea.setLineWrap(true);
-		textArea.setFont(new Font("΢���ź�", Font.PLAIN, 16));
+		textArea.setFont(new Font("微软雅黑", Font.PLAIN, 16));
 		textArea.setEditable(false);
 		textArea.setBounds(0, 59, 257, 191);
 		panel_3.add(textArea);
@@ -112,7 +112,7 @@ public class Fdetail extends JFrame {
 		panel_1.add(panel_4);
 		
 		JLabel label_1 = new JLabel("10:00 \u5F00\u59CB");
-		label_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		label_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_4.add(label_1);
 		
 		JPanel panel_5 = new JPanel();
@@ -135,7 +135,7 @@ public class Fdetail extends JFrame {
 			}
 		});
 		btnNewButton.setForeground(new Color(0, 0, 0));
-		btnNewButton.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_5.add(btnNewButton);
 		
 		JPanel panel_6 = new JPanel();
@@ -146,7 +146,7 @@ public class Fdetail extends JFrame {
 		
 		JLabel label_2 = new JLabel("18:00 \u5F00\u59CB");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
-		label_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		label_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_6.add(label_2);
 		
 		JPanel panel_7 = new JPanel();
@@ -168,7 +168,7 @@ public class Fdetail extends JFrame {
 				});
 			}
 		});
-		btnNewButton_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_7.add(btnNewButton_1);
 		
 		JPanel panel_8 = new JPanel();
@@ -178,7 +178,7 @@ public class Fdetail extends JFrame {
 		panel_1.add(panel_8);
 		
 		JLabel label_3 = new JLabel("22:00 \u5F00\u59CB");
-		label_3.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		label_3.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_8.add(label_3);
 		
 		JPanel panel_9 = new JPanel();
@@ -200,59 +200,52 @@ public class Fdetail extends JFrame {
 				});
 			}
 		});
-		btnNewButton_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_9.add(btnNewButton_2);
 		
 		JPanel panel_2 = new JPanel();
 		contentPane.add(panel_2);
-		panel_2.setLayout(new GridLayout(3, 2, 0, 0));
+		panel_2.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel_10 = new JPanel();
 		panel_10.setBackground(new Color(255, 228, 196));
-		panel_2.add(panel_10);
+		panel_2.add(panel_10, BorderLayout.NORTH);
 		panel_10.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("\u7535\u5F71\u8BC4\u8BBA\u533A");
 		panel_10.add(lblNewLabel_1);
 		lblNewLabel_1.setForeground(Color.RED);
-		lblNewLabel_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		lblNewLabel_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		JPanel panel_11 = new JPanel();
-		panel_11.setBackground(new Color(255, 228, 196));
 		panel_2.add(panel_11);
-		panel_11.setLayout(new BorderLayout(0, 0));
+		panel_11.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		panel_11.add(lblNewLabel_2);
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(0, 0, 514, 221);
+		panel_11.add(scrollPane_1);
 		
 		JTextArea textArea_1 = new JTextArea();
-		panel_2.add(textArea_1);
+		try {
+			textArea_1.setText(f.getComments());
+		} catch (Exception e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		textArea_1.setWrapStyleWord(true);
+		textArea_1.setBounds(0, 0, 514, 221);
+		panel_11.add(textArea_1);
+		textArea_1.setBackground(new Color(255, 222, 173));
+		textArea_1.setEditable(false);
 		textArea_1.setLineWrap(true);
-		textArea_1.setFont(new Font("΢���ź�", Font.PLAIN, 16));
-		textArea_1.setBackground(new Color(255, 228, 181));
+		scrollPane_1.setViewportView(textArea_1);
 		
-		JTextArea textArea_2 = new JTextArea();
-		panel_2.add(textArea_2);
-		textArea_2.setWrapStyleWord(true);
-		textArea_2.setLineWrap(true);
-		textArea_2.setFont(new Font("΢���ź�", Font.PLAIN, 16));
-		textArea_2.setBackground(new Color(255, 228, 181));
-		
-		JTextArea textArea_3 = new JTextArea();
-		panel_2.add(textArea_3);
-		textArea_3.setWrapStyleWord(true);
-		textArea_3.setLineWrap(true);
-		textArea_3.setFont(new Font("΢���ź�", Font.PLAIN, 16));
-		textArea_3.setBackground(new Color(255, 222, 173));
-		
-		JTextArea textArea_4 = new JTextArea();
-		panel_2.add(textArea_4);
-		textArea_4.setWrapStyleWord(true);
-		textArea_4.setLineWrap(true);
-		textArea_4.setFont(new Font("΢���ź�", Font.PLAIN, 16));
-		textArea_4.setBackground(new Color(255, 222, 173));
+		try {
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 	}
 }

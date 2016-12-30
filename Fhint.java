@@ -11,10 +11,17 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JButton;
+
+import wandongyu.*;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Fhint extends JFrame {
 
 	private JPanel contentPane;
+	static Client client=new Client();
 
 	/**
 	 * Launch the application.
@@ -46,7 +53,7 @@ public class Fhint extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\u60A8\u5DF2\u6210\u529F\u6CE8\u518C\uFF01\uFF01");
 		lblNewLabel.setBackground(Color.WHITE);
-		lblNewLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel, BorderLayout.CENTER);
 	}

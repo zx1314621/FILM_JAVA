@@ -18,10 +18,10 @@ import java.awt.event.ActionEvent;
 
 public class Fseat extends JFrame {
 
-	static int number=0;
+	static int number;
 	private JPanel contentPane;
 	public static JTextArea textArea = new JTextArea();
-	private String str="ÄúÑ¡µÄ×ùÎ»Îª£º";
+	private String str="ä½ å·²é€‰çš„åº§ä½ä¸º:";
 	static Film test;
 	static Function f=new Function();
 	static boolean[][] seats;
@@ -321,11 +321,11 @@ public class Fseat extends JFrame {
 		panel.add(btn55);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Freedom\\Documents\\JavaWorkSpace\\testStatic\\bar1.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("bar1.png"));
 		contentPane.add(lblNewLabel_1, BorderLayout.WEST);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Freedom\\Documents\\JavaWorkSpace\\testStatic\\bar1.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("bar1.png"));
 		contentPane.add(lblNewLabel_2, BorderLayout.EAST);
 		
 		JPanel panel_1 = new JPanel();
@@ -337,7 +337,7 @@ public class Fseat extends JFrame {
 		panel_2.setLayout(new BorderLayout(0, 0));
 		textArea.setRows(3);
 		textArea.setLineWrap(true);
-		textArea.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 13));
+		textArea.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 13));
 		
 		//JTextArea textArea = new JTextArea();
 		textArea.setBackground(SystemColor.info);
@@ -353,8 +353,10 @@ public class Fseat extends JFrame {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
+							System.out.println(number);
 							Flist frame = new Flist();
 							frame.setVisible(true);
+							System.out.println(number);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -362,7 +364,7 @@ public class Fseat extends JFrame {
 				});
 			}
 		});
-		btnNewButton.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
+		btnNewButton.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 20));
 		panel_3.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("\u91CD\u7F6E");
@@ -375,16 +377,17 @@ public class Fseat extends JFrame {
 				reset(btn31);reset(btn32);reset(btn33);reset(btn34);reset(btn35);
 				reset(btn41);reset(btn42);reset(btn43);reset(btn44);reset(btn45);
 				reset(btn51);reset(btn52);reset(btn53);reset(btn54);reset(btn55);
-				str="ÄúÑ¡µÄ×ùÎ»Îª£º";
+				str="ä½ å·²é€‰çš„åº§ä½ä¸º:";
 				for(int i=0;i<5;i++)
 				{
 					for(int j=0;j<5;j++){
 						test.seats[i][j]=true;
 					}
 				}
+				number=0;
 			}
 		});
-		btnNewButton_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
+		btnNewButton_1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 20));
 		panel_3.add(btnNewButton_1);
 	}
 	

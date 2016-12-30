@@ -73,10 +73,10 @@ public class Ffilm extends JFrame {
 				
 			}
 		});
-		btn1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btn1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		
 		JButton btnNewButton = new JButton("\u4F60\u7684\u540D\u5B57");
-		btnNewButton.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -107,7 +107,7 @@ public class Ffilm extends JFrame {
 		JButton btn2 = new JButton("");
 		btn2.setIcon(new ImageIcon("pic1.jpg"));
 		panel_7.add(btn2);
-		btn2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btn2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		
 		JButton btnNewButton_1 = new JButton("\u795E\u5947\u52A8\u7269\u5728\u54EA\u91CC");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -125,7 +125,7 @@ public class Ffilm extends JFrame {
 				});
 			}
 		});
-		btnNewButton_1.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_1.add(btnNewButton_1, BorderLayout.SOUTH);
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -186,7 +186,7 @@ public class Ffilm extends JFrame {
 				});
 			}
 		});
-		btnNewButton_2.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_2.add(btnNewButton_2, BorderLayout.SOUTH);
 		
 		JPanel panel_3 = new JPanel();
@@ -232,7 +232,7 @@ public class Ffilm extends JFrame {
 				});
 			}
 		});
-		btnNewButton_3.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_3.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_3.add(btnNewButton_3, BorderLayout.SOUTH);
 		
 		JPanel panel_4 = new JPanel();
@@ -278,7 +278,7 @@ public class Ffilm extends JFrame {
 				});
 			}
 		});
-		btnNewButton_4.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_4.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_4.add(btnNewButton_4, BorderLayout.SOUTH);
 		
 		JPanel panel_5 = new JPanel();
@@ -324,7 +324,7 @@ public class Ffilm extends JFrame {
 				});
 			}
 		});
-		btnNewButton_5.setFont(new Font("΢���ź�", Font.PLAIN, 20));
+		btnNewButton_5.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_5.add(btnNewButton_5, BorderLayout.SOUTH);
 	}
 

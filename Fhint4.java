@@ -44,7 +44,7 @@ public class Fhint4 extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\u60A8\u5DF2\u6210\u529F\u767B\u5F55\uFF01");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 20));
 		lblNewLabel.setBackground(new Color(245, 245, 220));
 		contentPane.add(lblNewLabel, BorderLayout.CENTER);
 	}

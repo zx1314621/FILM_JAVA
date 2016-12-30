@@ -43,7 +43,7 @@ public class Fhint2 extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("\u767B\u5F55\u5931\u8D25\uFF0C\u8D26\u53F7\u5BC6\u7801\u53EF\u80FD\u6709\u9519\u8BEF\uFF01\uFF01");
-		lblNewLabel.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 	}
