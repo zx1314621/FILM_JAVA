@@ -151,7 +151,7 @@ public class Fregister extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				f.save(textField.getText(), textField_1.getText(), textField_2.getText(),textField_3.getText());
-				
+				f.WriteArraylistToFile();
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {

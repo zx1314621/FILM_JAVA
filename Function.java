@@ -1,7 +1,8 @@
 package cn.edu.usst.freedom;
-import java.io.Serializable;
+import java.io.*;
 import java.util.*;
 
+import wandongyu.Client;
 import webspider.OnlineReview;
 public class Function implements Serializable{
 	
@@ -11,6 +12,8 @@ public class Function implements Serializable{
 	String[]cinema=new String[10];
    static User tran=new User();
    static User user1=new User();
+   static Client client =new Client();
+   //登录信息的判断
 	boolean signin(String account,String password){
 		User test=new User();
 		int i=0;
@@ -28,6 +31,7 @@ public class Function implements Serializable{
 		}
 		return m;
 	}
+	//用户信息的存取
 	void save(String account,String password,String username,String telephone){
 		User test=new User();
 		test.setaccount(account);
@@ -36,6 +40,7 @@ public class Function implements Serializable{
 		test.setTelephone(telephone);
 		user.add(test);
 	}
+	//用户信息的查询
 	User refer(String account){
 		int i;
 		User test=new User();
@@ -57,6 +62,7 @@ public class Function implements Serializable{
 		return user1;
 	}
 
+	//电影ArrayList的初始化
 	void oriFilm(){
 		Film film0=new Film("你的名字",50,"pic0.jpg","\u300A\u4F60\u7684\u540D\u5B57\u300B\u662F\u7531\u65B0\u6D77\u8BDA\u6267\u5BFC\u7684\u4E00\u90E8\u65E5\u672C\u52A8\u753B\u7535\u5F71\uFF0C\u7531\u795E\u6728\u9686\u4E4B\u4ECB\u3001\u4E0A\u767D\u77F3\u840C\u97F3\u62C5\u4EFB\u4E3B\u8981\u914D\u97F3\u6F14\u5458\uFF0C\u4EBA\u8BBE\u662F\u7531\u53C2\u4E0E\u8FC7\u300A\u6211\u4EEC\u4ECD\u672A\u77E5\u9053\u90A3\u5929\u6240\u770B\u89C1\u7684\u82B1\u7684\u540D\u5B57\u3002\u300B\u7684\u7530\u4E2D\u5C06\u8D3A\u62C5\u5F53\uFF0C\u4F5C\u753B\u5BFC\u6F14\u7531\u66FE\u521B\u4F5C\u8FC7\u300A\u5343\u4E0E\u5343\u5BFB\u300B\u3001\u300A\u5E7D\u7075\u516C\u4E3B\u300B\u7684\u5B89\u85E4\u96C5\u53F8\u6267\u7B14\u3002\u4F5C\u54C1\u4E8E2016\u5E748\u670826\u65E5\u5728\u65E5\u672C\u4E0A\u6620\u3002\u4E2D\u56FD\u5185\u5730\u4E8E2016\u5E7412\u67082\u65E5\u4E0A\u6620\uFF0C\u5206\u4E3A\u65E5\u8BED\u539F\u58F0\u4E2D\u6587\u5B57\u5E55\u7248\u548C\u4E2D\u6587\u914D\u97F3\u72482\u79CD\u7248\u672C\u3002\u4F5C\u54C1\u8BB2\u8FF0\u4E86\u7537\u5973\u9AD8\u4E2D\u751F\u5728\u68A6\u4E2D\u76F8\u9047\u7684\u5E7B\u60F3\u6545\u4E8B\u3002\u300A\u4F60\u7684\u540D\u5B57\u300B\u662F\u7531\u65B0\u6D77\u8BDA\u6267\u5BFC\u7684\u4E00\u90E8\u65E5\u672C\u52A8\u753B\u7535\u5F71\uFF0C\u7531\u795E\u6728\u9686\u4E4B\u4ECB\u3001\u4E0A\u767D\u77F3\u840C\u97F3\u62C5\u4EFB\u4E3B\u8981\u914D\u97F3\u6F14\u5458\uFF0C\u4EBA\u8BBE\u662F\u7531\u53C2\u4E0E\u8FC7\u300A\u6211\u4EEC\u4ECD\u672A\u77E5\u9053\u90A3\u5929\u6240\u770B\u89C1\u7684\u82B1\u7684\u540D\u5B57\u3002\u300B\u7684\u7530\u4E2D\u5C06\u8D3A\u62C5\u5F53\uFF0C\u4F5C\u753B\u5BFC\u6F14\u7531\u66FE\u521B\u4F5C\u8FC7\u300A\u5343\u4E0E\u5343\u5BFB\u300B\u3001\u300A\u5E7D\u7075\u516C\u4E3B\u300B\u7684\u5B89\u85E4\u96C5\u53F8\u6267\u7B14\u3002\u4F5C\u54C1\u4E8E2016\u5E748\u670826\u65E5\u5728\u65E5\u672C\u4E0A\u6620\u3002\u4E2D\u56FD\u5185\u5730\u4E8E2016\u5E7412\u67082\u65E5\u4E0A\u6620\uFF0C\u5206\u4E3A\u65E5\u8BED\u539F\u58F0\u4E2D\u6587\u5B57\u5E55\u7248\u548C\u4E2D\u6587\u914D\u97F3\u72482\u79CD\u7248\u672C\u3002\u4F5C\u54C1\u8BB2\u8FF0\u4E86\u7537\u5973\u9AD8\u4E2D\u751F\u5728\u68A6\u4E2D\u76F8\u9047\u7684\u5E7B\u60F3\u6545\u4E8B\u3002");
 		Film film1=new Film("神奇动物在哪里",48,"pic1.jpg","\u300A\u795E\u5947\u52A8\u7269\u5728\u54EA\u91CC\u300B\u662F\u7531\u7F8E\u56FD\u534E\u7EB3\u5144\u5F1F\u5F71\u7247\u516C\u53F8\u3001\u82F1\u56FD\u76DB\u65E5\u5F71\u4E1A\u516C\u53F8\u8054\u5408\u51FA\u54C1\u7684\u5947\u5E7B\u5192\u9669\u7535\u5F71\uFF0C\u7531\u82F1\u56FD\u5BFC\u6F14\u5927\u536B\u00B7\u53F6\u8328\u6267\u5BFC\uFF0C\u57C3\u8FEA\u00B7\u96F7\u5FB7\u6885\u6069\u3001\u51EF\u745F\u7433\u00B7\u6C83\u7279\u65AF\u987F\u3001\u827E\u8389\u68EE\u00B7\u82CF\u6735\u513F\u3001\u4E39\u00B7\u798F\u683C\u52D2\u3001\u67EF\u6797\u00B7\u6CD5\u745E\u5C14\u7B49\u8054\u5408\u4E3B\u6F14\u3002\u8BE5\u7247\u8BB2\u8FF0\u4E86\u795E\u5947\u52A8\u7269\u5B66\u5BB6\u7EBD\u7279\u00B7\u65AF\u5361\u66FC\u5FB7\u79BB\u5F00\u970D\u683C\u6C83\u5179\u9B54\u6CD5\u5B66\u6821\u540E\uFF0C\u4E3A\u4E86\u5BFB\u627E\u548C\u4FDD\u62A4\u795E\u5947\u52A8\u7269\u8E0F\u5165\u7EBD\u7EA6\u6240\u53D1\u751F\u7684\u4E00\u6BB5\u60CA\u5FC3\u52A8\u9B44\u7684\u5192\u9669\u6545\u4E8B\u3002\u8BE5\u7247\u4E8E2016\u5E7411\u670818\u65E5\u5728\u7F8E\u56FD\u4E0A\u6620\uFF0C\u4E8E2016\u5E7411\u670825\u65E5\u5728\u4E2D\u56FD\u4E0A\u6620\u3002");
@@ -72,6 +78,7 @@ public class Function implements Serializable{
 	    cinema[4]=("博纳银兴国际影城");cinema[9]=("海艺数字影城");
 		
 	}
+	//电影信息的获取
 	Film getFilm()
 	{
 		Film test;
@@ -81,6 +88,7 @@ public class Function implements Serializable{
 		test=film.get(i);
 		return test;
 	}
+	//影院的获取
 	String getCinema(){
 		int i;
 		String str;
@@ -89,6 +97,7 @@ public class Function implements Serializable{
 		str=cinema[i];
 		return str;
 	}
+	//评论的获取
 	String getComments() throws Exception{
 		String str = null;
 		OnlineReview or=new OnlineReview();
@@ -97,7 +106,7 @@ public class Function implements Serializable{
 		i=f.backi();
 		switch(i)
 		{
-		case 0:str=or.getonlinereviews_yourname();break;
+		case 0:str=or.getonlinereviews_yourname()+client.getreviewFromServer_yourname();break;
 		case 1:str=or.getonlinereviews_horrypotter2016();break;
 		case 2:str=or.getonlinereviews_ShiTu();break;
 		case 3:str=or.getonlinereviews_MeiGongHe();break;
@@ -106,6 +115,52 @@ public class Function implements Serializable{
 		}
 		return str;
 	}
+	//文件的写入
+	public void WriteArraylistToFile(){
+		ObjectOutputStream oos = null;
+		
+		try {
+			oos = new ObjectOutputStream(new FileOutputStream("arraylist_user.dat"));
+			oos.writeObject(user);
+			oos.flush();
+			
+			oos.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	//文件的读取
+	public ArrayList<User> ReadArraylistFromFile() throws IOException, ClassNotFoundException{
+		File file=new File("arraylist_user.dat");
+		FileInputStream in;	
+		User user1=new User();
+		
+			
+				in=new FileInputStream(file);
+				 ObjectInputStream objIn;
+				 objIn = new ObjectInputStream(in);
+				 ArrayList<User> list=(ArrayList<User>) objIn.readObject();
+				 objIn.close();
+				
+
+			     return list;
+			
+
+	}
+	
+	public void start(){
+		try {
+			user=f.ReadArraylistFromFile();
+		} catch (ClassNotFoundException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
 
 	
 }

@@ -6,7 +6,9 @@ public class Film implements Serializable{
 	String name;
 	int price;
 	public String filmreview;
-	boolean[][] seats;
+	boolean[][] seat1s;
+	boolean[][] seat2s;
+	boolean[][] seat3s;
 	int mark;
 	int member;
 	String pic;
@@ -18,12 +20,16 @@ public class Film implements Serializable{
 		this.mark=mark;
 		this.pic=pic;
 		this.brief=brief;
-		seats=new boolean[5][5];
+		seat1s=new boolean[5][5];
+		seat2s=new boolean[5][5];
+		seat3s=new boolean[5][5];
 		this.mark=50;
 		this.member=0;
 		for(int i=0;i<5;i++){
 			for(int j=0;j<5;j++){
-				seats[i][j]=true;
+				seat1s[i][j]=true;
+				seat2s[i][j]=true;
+				seat3s[i][j]=true;
 			}
 		}
 	}
@@ -34,11 +40,23 @@ public class Film implements Serializable{
 		this.member++;
 		this.mark=((this.mark*(this.member-1)+mark)/(this.member));
 	}
-	void changeSeats(int i,int j){
-		this.seats[i][j]=false;
+	void changeSeat1s(int i,int j){
+		this.seat1s[i][j]=false;
 	}
-	void resetSeats(int i,int j){
-		this.seats[i][j]=true;
+	void changeSeat2s(int i,int j){
+		this.seat2s[i][j]=false;
+	}
+	void changeSeat3s(int i,int j){
+		this.seat3s[i][j]=false;
+	}
+	void resetSeat1s(int i,int j){
+		this.seat1s[i][j]=true;
+	}
+	void resetSeat2s(int i,int j){
+		this.seat2s[i][j]=true;
+	}
+	void resetSeat3s(int i,int j){
+		this.seat3s[i][j]=true;
 	}
 	public void setfilmreview(String filmreview){
 		this.filmreview=filmreview;

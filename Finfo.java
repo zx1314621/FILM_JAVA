@@ -24,6 +24,8 @@ public class Finfo extends JFrame {
 	static Function f=new Function();
 	private JLabel lblNewLabel_4;
 	private JTextField textField_4;
+	private JLabel lblNewLabel_5;
+	private JTextField textField_5;
 
 	/**
 	 * Launch the application.
@@ -48,7 +50,7 @@ public class Finfo extends JFrame {
 		setTitle("\u8FD9\u662F\u60A8\u7684\u8D26\u6237\u4FE1\u606F");
 		user=f.getUser();
 		setBounds(100, 100, 450, 300);
-		getContentPane().setLayout(new GridLayout(5, 0, 0, 0));
+		getContentPane().setLayout(new GridLayout(6, 0, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel("\u8D26\u53F7\uFF1A");
 		lblNewLabel.setBackground(Color.WHITE);
@@ -120,6 +122,20 @@ public class Finfo extends JFrame {
 		textField_4.setBackground(SystemColor.info);
 		getContentPane().add(textField_4);
 		textField_4.setColumns(10);
+		
+		lblNewLabel_5 = new JLabel("已购电影票");
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5.setFont(new Font("微软雅黑", Font.PLAIN, 20));
+		getContentPane().add(lblNewLabel_5);
+		
+		textField_5 = new JTextField();
+		textField_5.setText(user.getTicket());
+		textField_5.setBackground(SystemColor.info);
+		textField_5.setEditable(false);
+		textField_5.setFont(new Font("微软雅黑", Font.PLAIN, 20));
+		textField_5.setHorizontalAlignment(SwingConstants.CENTER);
+		getContentPane().add(textField_5);
+		textField_5.setColumns(10);
 	}
 
 }
