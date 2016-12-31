@@ -18,6 +18,8 @@ import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.io.IOException;
+
 import javax.swing.DropMode;
 import javax.swing.JPasswordField;
 
@@ -143,6 +145,7 @@ public class SA {
 		JButton btnNewButton = new JButton("\u767B\u5F55");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				f.start();
 				if (f.signin(textField.getText(), textField_1.getText())==true) {
 					
 					EventQueue.invokeLater(new Runnable() {
@@ -191,7 +194,6 @@ public class SA {
 		JButton btnNewButton_1 = new JButton("\u6CE8\u518C");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {

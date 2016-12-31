@@ -1,5 +1,4 @@
 package cn.edu.usst.freedom;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -16,15 +15,15 @@ import java.awt.SystemColor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Fseat extends JFrame {
+public class Fseat2 extends JFrame {
 
-	static int number=0;
+	static int number;
 	private JPanel contentPane;
 	public static JTextArea textArea = new JTextArea();
 	private String str="你已选的座位为:";
 	static Film test;
 	static Function f=new Function();
-	static boolean[][] seat1s;
+	static boolean[][] seat3s;
 	
 	
 	/**
@@ -46,12 +45,13 @@ public class Fseat extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Fseat() {
+	public Fseat2() {
+		number=0;
 		test=f.getFilm();
-		seat1s=new boolean[5][5];
+		seat3s=new boolean[5][5];
 		for(int i=0;i<5;i++){
 			for(int j=0;j<5;j++){
-				seat1s[i][j]=true;
+				seat3s[i][j]=true;
 			}
 		}
 		setTitle("\u8BF7\u9009\u62E9\u60A8\u7684\u5EA7\u4F4D");
@@ -70,276 +70,276 @@ public class Fseat extends JFrame {
 		panel.setLayout(new GridLayout(5, 5, 0, 0));
 		
 		final JButton btn11 = new JButton("1\u63921\u5EA7");
-		if(test.seat1s[0][0]==false){btn11.setBackground(SystemColor.info);}
+		if(test.seat3s[0][0]==false){btn11.setBackground(SystemColor.info);}
 		btn11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn11);
 				number++;
-				test.changeSeat1s(0,0);
+				test.changeSeat3s(0,0);
 			}
 		});
 		panel.add(btn11);
 		
 		final JButton btn12 = new JButton("1\u63922\u5EA7");
-		if(test.seat1s[0][1]==false){btn12.setBackground(SystemColor.info);}
+		if(test.seat3s[0][1]==false){btn12.setBackground(SystemColor.info);}
 		btn12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn12);
 				number++;
-				test.changeSeat1s(0,1);
+				test.changeSeat3s(0,1);
 			}
 		});
 		panel.add(btn12);
 		
 		final JButton btn13 = new JButton("1\u63923\u5EA7");
-		if(test.seat1s[0][2]==false){btn13.setBackground(SystemColor.info);}
+		if(test.seat3s[0][2]==false){btn13.setBackground(SystemColor.info);}
 		btn13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn13);
 				number++;
-				test.changeSeat1s(0,2);
+				test.changeSeat3s(0,2);
 			}
 		});
 		panel.add(btn13);
 		
 		final JButton btn14 = new JButton("1\u63924\u5EA7");
-		if(test.seat1s[0][3]==false){btn14.setBackground(SystemColor.info);}
+		if(test.seat3s[0][3]==false){btn14.setBackground(SystemColor.info);}
 		btn14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn14);
 				number++;
-				test.changeSeat1s(0,3);
+				test.changeSeat3s(0,3);
 			}
 		});
 		panel.add(btn14);
 		
 		final JButton btn15 = new JButton("1\u63925\u5EA7");
-		if(test.seat1s[0][4]==false){btn15.setBackground(SystemColor.info);}
+		if(test.seat3s[0][4]==false){btn15.setBackground(SystemColor.info);}
 		btn15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn15);
 				number++;
-				test.changeSeat1s(0,4);
+				test.changeSeat3s(0,4);
 			}
 		});
 		panel.add(btn15);
 		
 		final JButton btn21 = new JButton("2\u63921\u5EA7");
-		if(test.seat1s[1][0]==false){btn21.setBackground(SystemColor.info);}
+		if(test.seat3s[1][0]==false){btn21.setBackground(SystemColor.info);}
 		btn21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn21);
 				number++;
-				test.changeSeat1s(1,0);
+				test.changeSeat3s(1,0);
 			}
 		});
 		panel.add(btn21);
 		
 		final JButton btn22 = new JButton("2\u63922\u5EA7");
-		if(test.seat1s[1][1]==false){btn22.setBackground(SystemColor.info);}
+		if(test.seat3s[1][1]==false){btn22.setBackground(SystemColor.info);}
 		btn22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn22);
 				number++;
-				test.changeSeat1s(1,1);
+				test.changeSeat3s(1,1);
 			}
 		});
 		panel.add(btn22);
 		
 		final JButton btn23 = new JButton("2\u63923\u5EA7");
-		if(test.seat1s[1][2]==false){btn23.setBackground(SystemColor.info);}
+		if(test.seat3s[1][2]==false){btn23.setBackground(SystemColor.info);}
 		btn23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn23);
 				number++;
-				test.changeSeat1s(1,2);
+				test.changeSeat3s(1,2);
 			}
 		});
 		panel.add(btn23);
 		
 		final JButton btn24 = new JButton("2\u63924\u5EA7");
-		if(test.seat1s[1][3]==false){btn24.setBackground(SystemColor.info);}
+		if(test.seat3s[1][3]==false){btn24.setBackground(SystemColor.info);}
 		btn24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn24);
 				number++;
-				test.changeSeat1s(1,3);
+				test.changeSeat3s(1,3);
 			}
 		});
 		panel.add(btn24);
 		
 		final JButton btn25 = new JButton("2\u63925\u5EA7");
-		if(test.seat1s[1][4]==false){btn25.setBackground(SystemColor.info);}
+		if(test.seat3s[1][4]==false){btn25.setBackground(SystemColor.info);}
 		btn25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn25);
 				number++;
-				test.changeSeat1s(1,4);
+				test.changeSeat3s(1,4);
 			}
 		});
 		panel.add(btn25);
 		
 		final JButton btn31 = new JButton("3\u63921\u5EA7");
-		if(test.seat1s[2][0]==false){btn31.setBackground(SystemColor.info);}
+		if(test.seat3s[2][0]==false){btn31.setBackground(SystemColor.info);}
 		btn31.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn31);
 				number++;
-				test.changeSeat1s(2,0);
+				test.changeSeat3s(2,0);
 			}
 		});
 		panel.add(btn31);
 		
 		final JButton btn32 = new JButton("3\u63922\u5EA7");
-		if(test.seat1s[2][1]==false){btn32.setBackground(SystemColor.info);}
+		if(test.seat3s[2][1]==false){btn32.setBackground(SystemColor.info);}
 		btn32.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn32);
 				number++;
-				test.changeSeat1s(2,1);
+				test.changeSeat3s(2,1);
 			}
 		});
 		panel.add(btn32);
 		
 		final JButton btn33 = new JButton("3\u63923\u5EA7");
-		if(test.seat1s[2][2]==false){btn33.setBackground(SystemColor.info);}
+		if(test.seat3s[2][2]==false){btn33.setBackground(SystemColor.info);}
 		btn33.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn33);
 				number++;
-				test.changeSeat1s(2,2);
+				test.changeSeat3s(2,2);
 			}
 		});
 		panel.add(btn33);
 		
 		final JButton btn34 = new JButton("3\u63924\u5EA7");
-		if(test.seat1s[2][3]==false){btn34.setBackground(SystemColor.info);}
+		if(test.seat3s[2][3]==false){btn34.setBackground(SystemColor.info);}
 		btn34.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn34);
 				number++;
-				test.changeSeat1s(2,3);
+				test.changeSeat3s(2,3);
 			}
 		});
 		panel.add(btn34);
 		
 		final JButton btn35 = new JButton("3\u63925\u5EA7");
-		if(test.seat1s[2][4]==false){btn35.setBackground(SystemColor.info);}
+		if(test.seat3s[2][4]==false){btn35.setBackground(SystemColor.info);}
 		btn35.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn35);
 				number++;
-				test.changeSeat1s(2,4);
+				test.changeSeat3s(2,4);
 			}
 		});
 		panel.add(btn35);
 		
 		final JButton btn41 = new JButton("4\u63921\u5EA7");
-		if(test.seat1s[3][0]==false){btn41.setBackground(SystemColor.info);}
+		if(test.seat3s[3][0]==false){btn41.setBackground(SystemColor.info);}
 		btn41.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn41);
 				number++;
-				test.changeSeat1s(3,0);
+				test.changeSeat3s(3,0);
 			}
 		});
 		panel.add(btn41);
 		
 		final JButton btn42 = new JButton("4\u63922\u5EA7");
-		if(test.seat1s[3][1]==false){btn42.setBackground(SystemColor.info);}
+		if(test.seat3s[3][1]==false){btn42.setBackground(SystemColor.info);}
 		btn42.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn42);
 				number++;
-				test.changeSeat1s(3,1);
+				test.changeSeat3s(3,1);
 			}
 		});
 		panel.add(btn42);
 		
 		final JButton btn43 = new JButton("4\u63923\u5EA7");
-		if(test.seat1s[3][2]==false){btn43.setBackground(SystemColor.info);}
+		if(test.seat3s[3][2]==false){btn43.setBackground(SystemColor.info);}
 		btn43.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn43);
 				number++;
-				test.changeSeat1s(3,2);
+				test.changeSeat3s(3,2);
 			}
 		});
 		panel.add(btn43);
 		
 		final JButton btn44 = new JButton("4\u63924\u5EA7");
-		if(test.seat1s[3][3]==false){btn44.setBackground(SystemColor.info);}
+		if(test.seat3s[3][3]==false){btn44.setBackground(SystemColor.info);}
 		btn44.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn44);
 				number++;
-				test.changeSeat1s(3,3);
+				test.changeSeat3s(3,3);
 			}
 		});
 		panel.add(btn44);
 		
 		final JButton btn45 = new JButton("4\u63925\u5EA7");
-		if(test.seat1s[3][4]==false){btn45.setBackground(SystemColor.info);}
+		if(test.seat3s[3][4]==false){btn45.setBackground(SystemColor.info);}
 		btn45.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn45);
 				number++;
-				test.changeSeat1s(3,4);
+				test.changeSeat3s(3,4);
 			}
 		});
 		panel.add(btn45);
 		
 		final JButton btn51 = new JButton("5\u63921\u5EA7");
-		if(test.seat1s[4][0]==false){btn51.setBackground(SystemColor.info);}
+		if(test.seat3s[4][0]==false){btn51.setBackground(SystemColor.info);}
 		btn51.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn51);
 				number++;
-				test.changeSeat1s(4,0);
+				test.changeSeat3s(4,0);
 			}
 		});
 		panel.add(btn51);
 		
 		final JButton btn52 = new JButton("5\u63922\u5EA7");
-		if(test.seat1s[4][1]==false){btn52.setBackground(SystemColor.info);}
+		if(test.seat3s[4][1]==false){btn52.setBackground(SystemColor.info);}
 		btn52.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn52);
 				number++;
-				test.changeSeat1s(4,1);
+				test.changeSeat3s(4,1);
 			}
 		});
 		panel.add(btn52);
 		
 		final JButton btn53 = new JButton("5\u63923\u5EA7");
-		if(test.seat1s[4][2]==false){btn53.setBackground(SystemColor.info);}
+		if(test.seat3s[4][2]==false){btn53.setBackground(SystemColor.info);}
 		btn53.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn53);
 				number++;
-				test.changeSeat1s(4,2);
+				test.changeSeat3s(4,2);
 			}
 		});
 		panel.add(btn53);
 		
 		final JButton btn54 = new JButton("5\u63924\u5EA7");
-		if(test.seat1s[4][3]==false){btn54.setBackground(SystemColor.info);}
+		if(test.seat3s[4][3]==false){btn54.setBackground(SystemColor.info);}
 		btn54.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn54);
 				number++;
-				test.changeSeat1s(4,3);
+				test.changeSeat3s(4,3);
 			}
 		});
 		panel.add(btn54);
 		
 		final JButton btn55 = new JButton("5\u63925\u5EA7");
-		if(test.seat1s[4][4]==false){btn55.setBackground(SystemColor.info);}
+		if(test.seat3s[4][4]==false){btn55.setBackground(SystemColor.info);}
 		btn55.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				print(btn55);
 				number++;
-				test.changeSeat1s(4,4);
+				test.changeSeat3s(4,4);
 			}
 		});
 		panel.add(btn55);
@@ -377,8 +377,10 @@ public class Fseat extends JFrame {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
+							System.out.println(number);
 							Flist frame = new Flist();
 							frame.setVisible(true);
+							System.out.println(number);
 							str=" ";
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -404,7 +406,7 @@ public class Fseat extends JFrame {
 				for(int i=0;i<5;i++)
 				{
 					for(int j=0;j<5;j++){
-						test.seat1s[i][j]=true;
+						test.seat3s[i][j]=true;
 					}
 				}
 				number=0;

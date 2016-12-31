@@ -19,7 +19,7 @@ import java.util.Random;
 
 import luckydraw.Fhint8;
 
-public class Flist extends JFrame {
+public class Flist1 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_1;
@@ -55,7 +55,7 @@ public class Flist extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Flist() {
+	public Flist1() {
 		
 		cname[0] = new String("SFC上海影城");
 		cname[1] = new String("大光明电影院");
@@ -81,7 +81,7 @@ public class Flist extends JFrame {
 		{
 			for(int j=0;j<5;j++)
 			{
-				if(test.seat1s[i][j]==false)
+				if(test.seat2s[i][j]==false)
 				{
 					if(i==0){line="第一排";}
 					else if(i==1){line="第二排";}

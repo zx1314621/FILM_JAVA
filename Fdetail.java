@@ -111,7 +111,7 @@ public class Fdetail extends JFrame {
 		flowLayout.setVgap(25);
 		panel_1.add(panel_4);
 		
-		JLabel label_1 = new JLabel("10:00 \u5F00\u59CB");
+		JLabel label_1 = new JLabel("电影院线");
 		label_1.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_4.add(label_1);
 		
@@ -119,7 +119,7 @@ public class Fdetail extends JFrame {
 		panel_1.add(panel_5);
 		panel_5.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnNewButton = new JButton("\u7535\u5F71\u9662\u7EBF");
+		JButton btnNewButton = new JButton("10:00开始");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				EventQueue.invokeLater(new Runnable() {
@@ -144,7 +144,7 @@ public class Fdetail extends JFrame {
 		flowLayout_1.setVgap(25);
 		panel_1.add(panel_6);
 		
-		JLabel label_2 = new JLabel("18:00 \u5F00\u59CB");
+		JLabel label_2 = new JLabel("就近分配");
 		label_2.setHorizontalAlignment(SwingConstants.CENTER);
 		label_2.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_6.add(label_2);
@@ -153,13 +153,14 @@ public class Fdetail extends JFrame {
 		panel_1.add(panel_7);
 		panel_7.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnNewButton_1 = new JButton("\u5C31\u8FD1\u5206\u914D");
+		JButton btnNewButton_1 = new JButton("18:00开始");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							Fseat frame = new Fseat();
+							
+							Fseat1 frame = new Fseat1();
 							frame.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -177,7 +178,7 @@ public class Fdetail extends JFrame {
 		flowLayout_2.setVgap(25);
 		panel_1.add(panel_8);
 		
-		JLabel label_3 = new JLabel("22:00 \u5F00\u59CB");
+		JLabel label_3 = new JLabel("点击选座");
 		label_3.setFont(new Font("微软雅黑", Font.PLAIN, 20));
 		panel_8.add(label_3);
 		
@@ -185,13 +186,13 @@ public class Fdetail extends JFrame {
 		panel_1.add(panel_9);
 		panel_9.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnNewButton_2 = new JButton("\u70B9\u51FB\u9009\u5EA7");
+		JButton btnNewButton_2 = new JButton("22:00开始");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							Fseat frame = new Fseat();
+							Fseat2 frame = new Fseat2();
 							frame.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();
